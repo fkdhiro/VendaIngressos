@@ -1,0 +1,14 @@
+<h1>Ingressos Disponíveis</h1>
+<ul>
+  {{#ingressos}}
+    <li>{{nome}} - R${{preco}} ({{quantidade}} disponíveis)
+      <form action="/compras/comprar" method="POST" style="display:inline;">
+        <input type="hidden" name="ingressoId" value="{{_id}}" />
+        <input type="number" name="quantidade" min="1" max="{{quantidade}}" required />
+        <button type="submit">Comprar</button>
+      </form>
+    </li>
+  {{/ingressos}}
+</ul>
+<a href="/compras/historico">Ver meu histórico de compras</a>
+<a href="/">Voltar ao início</a>

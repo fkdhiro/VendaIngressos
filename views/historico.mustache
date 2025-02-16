@@ -1,0 +1,13 @@
+<h1>Histórico de Compras</h1>
+{{#compras}}
+  <div>
+    <h3>Data: {{data}}</h3>
+    <ul>
+      {{#ingressos}}
+        <li>{{tipo.nome}} - Quantidade: {{quantidade}}</li>
+      {{/ingressos}}
+    </ul>
+  </div>
+{{/compras}}
+<a href="/ingressos">Ver ingressos disponíveis</a>
+<a href="/">Voltar ao início</a>
